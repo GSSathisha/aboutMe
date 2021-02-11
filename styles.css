@@ -24,7 +24,14 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
-
+.nav-item {
+    animation: fadeInUp 0.5s ease-in-out 0s forwards;
+    opacity: 0;
+}
+.profile-img {
+    animation: fadeInUp 1s ease-in-out 0s forwards;
+    opacity: 0;
+}
 .top-nav {
     height: 48px;
     color: #ffffff;
@@ -122,6 +129,11 @@
 .quick-access {
     margin-top: 6%;
     color: #f8f9fa;
+    animation: fadeIn ease 5s;
+    -webkit-animation: fadeIn ease 5s;
+    -moz-animation: fadeIn ease 5s;
+    -o-animation: fadeIn ease 5s;
+    -ms-animation: fadeIn ease 5s;
 }
 .quick-links span {
     margin: 10px;
@@ -172,6 +184,20 @@
     padding: 20px;
     border-radius: 6px;
     box-shadow: 0px 0px 8px rgb(0 0 0 / 28%);
+    opacity: 0; 
+    animation: fadeInUp 1s ease-in-out 0s forwards;
+}
+.first {
+    animation-delay: 1s;
+}
+.second {
+    animation-delay: 2s;
+}
+.third {
+    animation-delay: 3s;
+}
+.fourth {
+    animation-delay: 4s;
 }
 .edu-title {
     font-size: 20px;
@@ -189,9 +215,70 @@
 
 
 
+/* animation */
+@keyframes fadeInUp {
+    from { 
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
 
+@keyframes fade {
+    0%,100% { opacity: 0 }
+    50% { opacity: 1 }
+}
 
-
+@keyframes fadeIn{
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
 
 
 
