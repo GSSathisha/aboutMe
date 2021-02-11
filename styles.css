@@ -2,7 +2,9 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext');
 
 /* #Primary */
-
+.hero-anime {
+    color: #fff;
+}
 
 /* custom scroll */
 /* width */
@@ -163,7 +165,8 @@
     margin: 30px;
     font-weight: 700;
     font-size: 28px;
-    border-bottom: 2px solid #777;
+    border-bottom: 2px solid #f1efef;
+    color: #08ff08;
 }
 .mb-20 {
     margin-bottom: 20px;
@@ -212,7 +215,18 @@
 .education-card span {
     display: inline-block;
 }
-
+.gred-1 {
+    background-image: linear-gradient(to right top, #54729f, #0098c8, #00bdc0, #00da84, #a8eb12);
+}
+.gred-2 {
+    background-image: linear-gradient(to right top, #32dbe1, #00c7e8, #30b2e6, #599adb, #7782c5);
+}
+.gred-3 {
+    background-image: linear-gradient(to right top, #32a4e1, #4f9ae0, #698fdb, #7f83d2, #9377c5);
+}
+.gred-4 {
+    background-image: linear-gradient(to right top, #32c3e1, #3ac9c7, #66cba8, #93ca8a, #bec577);
+}
 
 
 /* animation */
