@@ -10,28 +10,24 @@
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
-  }
+}
   
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #888; 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 .nav-item {
     animation: fadeInUp 0.5s ease-in-out 0s forwards;
-    opacity: 0;
-}
-.profile-img {
-    animation: fadeInUp 1s ease-in-out 0s forwards;
     opacity: 0;
 }
 .top-nav {
@@ -131,11 +127,6 @@
 .quick-access {
     margin-top: 6%;
     color: #f8f9fa;
-    animation: fadeIn ease 5s;
-    -webkit-animation: fadeIn ease 5s;
-    -moz-animation: fadeIn ease 5s;
-    -o-animation: fadeIn ease 5s;
-    -ms-animation: fadeIn ease 5s;
 }
 .quick-links span {
     margin: 10px;
@@ -187,8 +178,6 @@
     padding: 20px;
     border-radius: 6px;
     box-shadow: 0px 0px 8px rgb(0 0 0 / 28%);
-    opacity: 0; 
-    animation: fadeInUp 1s ease-in-out 0s forwards;
 }
 .first {
     animation-delay: 1s;
@@ -229,6 +218,8 @@
 }
 
 
+
+
 /* animation */
 @keyframes fadeInUp {
     from { 
@@ -243,67 +234,6 @@
       transform: none;
     }
   }
-
-@keyframes fade {
-    0%,100% { opacity: 0 }
-    50% { opacity: 1 }
-}
-
-@keyframes fadeIn{
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
-  
-  @-moz-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
-  
-  @-webkit-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
-  
-  @-o-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
-  
-  @-ms-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
-
-
-
-
-
-
-
-
-
-
-
 
 /* Media */
 
@@ -329,4 +259,141 @@
     body.dark .nav-item::before {
         background-color: #fff;
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+  --animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-duration: 1s;
+}
+
+
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(25%);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes slideInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-25%);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes slideInleft {
+  0% {
+    opacity: 0;
+    transform: translateX(25%);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-25%);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.75);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes zoomReverseIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.25);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes flipInY {
+  0% {
+    opacity: 0;
+    transform: perspective(90vw) rotateY(67.50deg);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+[data-animation] {
+  opacity: 0;
+  animation-timing-function: var(--animation-timing-function);
+  animation-fill-mode: both;
+  animation-duration: var(--animation-duration);
+  will-change: transform, opacity;
+}
+
+.slideInUp {
+  animation-name: slideInUp;
+}
+.slideInDown {
+  animation-name: slideInDown;
+}
+.slideInLeft {
+  animation-name: slideInleft;
+}
+.slideInRight {
+  animation-name: slideInRight;
+}
+.fadeIn {
+  animation-name: fadeIn;
+}
+.zoomIn {
+  animation-name: zoomIn;
+}
+.zoomReverseIn {
+  animation-name: zoomReverseIn;
+}
+.flipInY {
+  animation-name: flipInY;
+}
+.flipOutY {
+  animation-name: flipInY;
+  animation-direction: reverse;
 }
